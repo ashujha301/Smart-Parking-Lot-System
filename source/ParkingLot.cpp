@@ -1,3 +1,3 @@
-#include "class header/ParkingSpot.hpp"
+#include "headers/ParkingLot.hpp"
 #include <iostream>
 using namespace std;

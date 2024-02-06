@@ -1,3 +1,3 @@
-#include "class header/Exit.hpp"
+#include "headers/Payment.hpp"
 #include <iostream>
 using namespace std;
