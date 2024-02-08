@@ -2,13 +2,24 @@
 #include <string>
 using namespace std;
 
-enum class VehicleType {car,truck,bike,electric};
+#include "headers/common.hpp";
+class ParkingSpot;
+class Level;
 
 class Vehicle {
-    public:
-        Vehicle(const string& plate,VehicleType type);
-        void printInfo() const;
-    private:
-        string licensePlate;
-        VehicleType type;
+    ParkingSpot *spot;
+    string numPlate;
+    VehicleSize vs;
+public:
+
+    Vehicle(string num,VehicleSize size) : numPlate(num),vs(size) {}
+    VehicleSize getSize() const {
+        return vs;
+    }
+
+    void parkInSpot(ParkingSpot *ps){
+        spot=ps;
+    }
+
+    void removeVehicle();
 };
